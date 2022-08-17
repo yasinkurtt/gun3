@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <h2>çizim</h2>
+    <canvas id="canvas" width="200" height="100" style="border:1px solid black ;">
+    </canvas>
+   
+    <script>
+        var c=document.getElementById("canvas");
+        var ctx=c.getContext("2d");
+      /*  ctx.moveTo(0,0);
+        ctx.lineTo(100,100);
+        ctx.lineTo(200,0);
+        ctx.lineTo(200,200);
+        ctx.lineTo(100,100);
+        ctx.lineTo(0,200);
+        ctx.lineTo(100,200);
+        ctx.lineTo(100,100);
+        ctx.lineTo(0,100);
+        ctx.stroke();
+*/
+       /* ctx.beginPath();
+        ctx.arc(100,100,100,0,2*Math.PI)
+        ctx.stroke();*/
+        
+      /*  ctx.font="22px ariel";
+        ctx.fillText("tatlı istiyoruz",0,500);
+        ctx.fillText("yarın bakarız",0,10); */
+        
+       ctx.moveTo(0,0);
+       ctx.lineTo(100,30)
+       ctx.stroke();
+       ctx.beginPath();
+        ctx.arc(120,41,20,0,2*Math.PI)
+        ctx.stroke();
+        ctx.font="25px ariel";
+        ctx.fillText("Y",111,50);
+        ctx.stroke();
+
+
+    </script>
+    <a href="index.html">anasayfa</a>
+    <a href="ders1.html">ders1</a>
+    <a href="ders2.html">ders2</a>
+    <a href="ders3.html">ders3</a>
+    <a href="ders4.html">Ders 4</a>
+    <a href="ders5.html">Ders 5</a>
+
+  </body>
+</html>

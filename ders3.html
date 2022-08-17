@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <p>bu sayfada kullanıcının lokasyon bilgisi enlem ve boylam olarak alınacaktır</p>
+    <button type="button" onclick="lokasyonAl()">kkonum bilgisi</button>
+    <br><br><br>
+    <p id="lokasyon">.......</p>
+
+
+
+
+
+
+    <a href="index.html">anasayfa</a>
+    <a href="ders1.html">ders1</a>
+    <a href="ders2.html">ders2</a>
+    <a href="ders3.html">ders3</a>
+    <a href="ders4.html">Ders 4</a>
+    <a href="ders5.html">Ders 5</a>
+
+    <script>
+        var lokasyon = document.getElementById("lokasyon");
+        function lokasyonAl(){
+            if(navigator.geolocation){
+    
+                navigator.geolocation.getCurrentPosition(showPosition);
+    
+            }else {
+                lokasyon.innerHTML="başaramadık";
+            }
+        }
+        function showPosition(position)
+        {
+            lokasyon.innerHTML="enlem: "+position.coords.latitude+
+            "<br> boylam: "+position.coords.longitude;
+        }
+    </script>
+    
+  </body>
+</html>

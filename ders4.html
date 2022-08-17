@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Ders 4</h3>
+    <h3>Hafızaya veri kaydetme</h3>
+    <input type="text" id="data" />
+    <button type="button" onclick="veriSakla()">Veriyi Sakla</button><br><br>
+    <button type="button" onclick="veriGetir()">Veriyi Getir</button>
+    <p id="veri">Birazdan Görüşürüz</p>
+
+
+    <script>
+        function veriSakla() {
+            var data = document.getElementById("data").value;
+            localStorage.setItem('data', data);
+        }
+
+        function veriGetir() {
+            document.getElementById("veri").innerHTML =
+                "Değer: " +
+                localStorage.getItem('data')
+
+        }
+    </script>
+
+<a href="index.html">anasayfa</a>
+<a href="ders1.html">ders1</a>
+<a href="ders2.html">ders2</a>
+<a href="ders3.html">ders3</a>
+<a href="ders4.html">Ders 4</a>
+<a href="ders5.html">Ders 5</a>
+
+</body>
+
+</html>
